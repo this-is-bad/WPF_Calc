@@ -266,7 +266,12 @@ namespace Wpf_Calc
             {
                 string numberString = txt_Value1.Text;
                 if (!ErrorsExist(true, numberString))
-                {                  
+                {
+                    if (cmb_CalcType.SelectedItem.ToString().ToLower() == "conversion")
+                    {
+                        numberString = CleanForConversion(numberString);
+                        txt_Value1.Text = numberString;
+                    }
                     CalcResult calcResult = new CalcResult();
                     calcResult.ResultText = GenerateResult(numberString);
                     SolutionWindow solutionWindow = new SolutionWindow(calcResult);
@@ -578,11 +583,6 @@ namespace Wpf_Calc
                     rb_CalcIntToHex.Visibility = Visibility.Visible;
                     rb_CalcIntToBinary.IsChecked = true;
                     break;
-            }
-
-            if (!ErrorsExist(false, baseTenInput) && calcType == "conversion")
-            {
-                txt_Value1.Text = CleanForConversion(baseTenInput);
             }
         }
 
