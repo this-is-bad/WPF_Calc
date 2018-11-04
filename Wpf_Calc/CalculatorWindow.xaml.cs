@@ -309,7 +309,7 @@ namespace Wpf_Calc
         private void Txt_Value1_TextChanged(object sender, TextChangedEventArgs e) //RoutedEventArgs e)
         {
             string str = txt_Value1.Text;//e.RoutedEvent.ToString();
-            if (str != null && str != "")
+            if (str != null)
             {
                 ErrorsExist(false, str);
             }
@@ -328,14 +328,17 @@ namespace Wpf_Calc
             if (!ValidateNumeric(testValue, checkForEmpty, out string error_message))
             {
                 tblk_Error.Text = error_message;
-                tblk_Error.Visibility = Visibility.Visible;
+                tblk_Error.Visibility = Visibility.Visible;                              
             }
             else
             {
                 tblk_Error.Text = "";
                 tblk_Error.Visibility = Visibility.Hidden;
-                errorExists = false;
+                errorExists = false;                
             }
+
+            txt_Value1.BorderBrush = (error_message == ""? System.Windows.Media.Brushes.White : System.Windows.Media.Brushes.Red) ;
+
             return errorExists;
         }
 

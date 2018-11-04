@@ -16,7 +16,27 @@
         </LinearGradientBrush>
     </Window.Background>
     <Grid>
-        <Canvas Margin="37,343,549,2">
+        <Canvas Margin="37,343,749,2">
+            <Button x:Name="btn_Close" Content="Close" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="#FF07FF00" Width="66" Height="30" Click="Btn_Close_Click" Canvas.Left="124" Canvas.Top="165">
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                        <GradientStop Color="#FFF3F3F3" Offset="0"/>
+                        <GradientStop Color="#FFEBEBEB"/>
+                        <GradientStop Color="#FFDDDDDD"/>
+                        <GradientStop Color="Black"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+            <Button x:Name="btn_Help" Content="Help" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="#FF07FF00" Width="66" Height="30" Click="Btn_Help_Click" Canvas.Left="16" Canvas.Top="165">
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                        <GradientStop Color="#FFF3F3F3" Offset="0"/>
+                        <GradientStop Color="#FFEBEBEB"/>
+                        <GradientStop Color="#FFDDDDDD"/>
+                        <GradientStop Color="Black"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
             <Button x:Name="btn_Num0" Content="0" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="#FF07FF00" Width="66" Height="30" Click="Btn_Num0_Click" Canvas.Left="16" Canvas.Top="117">
                 <Button.Background>
                     <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
@@ -185,29 +205,10 @@
                 </Style>
             </ComboBox.Resources>
         </ComboBox>
-        <Label x:Name="lbl_UoM" Content="Unit of Measure" HorizontalAlignment="Left" Margin="54,257,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.27,-0.515" Foreground="#FF07FF00"/>
-        <Label Content="Calculation Type" HorizontalAlignment="Left" Margin="38,110,0,0" VerticalAlignment="Top" Foreground="#FF07FF00"/>
+        <Label x:Name="lbl_UoM" Content="Unit of Measure" HorizontalAlignment="Left" Margin="50,257,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.27,-0.515" Foreground="#FF07FF00"/>
+        <Label Content="Calculation Type" HorizontalAlignment="Left" Margin="34,110,0,0" VerticalAlignment="Top" Foreground="#FF07FF00"/>
         <TextBlock x:Name="tblk_Error" HorizontalAlignment="Left" Margin="38,23,0,0" TextWrapping="WrapWithOverflow" VerticalAlignment="Top" Foreground="#FFE800FF" Width="175" Height="54" FontSize="14"><Run Text=""/><LineBreak/><Run/></TextBlock>
         <GroupBox Header="Calculation Choices" HorizontalAlignment="Left" Height="144" Margin="38,175,0,0" VerticalAlignment="Top" Width="207" Foreground="#FF07FF00"/>
-        <Button x:Name="btn_Close" Content="Close" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="#FF07FF00" Width="66" Height="30" Click="Btn_Close_Click" Margin="162,503,0,0" Canvas.Left="124" Canvas.Top="130">
-            <Button.Background>
-                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
-                    <GradientStop Color="#FFF3F3F3" Offset="0"/>
-                    <GradientStop Color="#FFEBEBEB"/>
-                    <GradientStop Color="#FFDDDDDD"/>
-                    <GradientStop Color="Black"/>
-                </LinearGradientBrush>
-            </Button.Background>
-        </Button>
-        <Button x:Name="btn_Help" Content="Help" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="#FF07FF00" Width="66" Height="30" Click="Btn_Help_Click" Margin="54,503,0,0" Canvas.Left="16" Canvas.Top="140">
-            <Button.Background>
-                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
-                    <GradientStop Color="#FFF3F3F3" Offset="0"/>
-                    <GradientStop Color="#FFEBEBEB"/>
-                    <GradientStop Color="#FFDDDDDD"/>
-                    <GradientStop Color="Black"/>
-                </LinearGradientBrush>
-            </Button.Background>
-        </Button>
+        
     </Grid>
 </Window>

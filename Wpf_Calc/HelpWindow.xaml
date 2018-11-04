@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Wpf_Calc"
         mc:Ignorable="d"
-        Title="Instructions" Height="420" Width="258">
+        Title="Instructions" Height="386" Width="288">
     <Window.Background>
         <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
             <GradientStop Color="#FF323232" Offset="0.82"/>
@@ -14,19 +14,18 @@
             <GradientStop Color="#FF141414" Offset="0.418"/>
         </LinearGradientBrush>
     </Window.Background>
-    <Grid Margin="10,0,2,2" Height="387" IsHitTestVisible="True">
+    <Grid Margin="10,0,2,2" IsHitTestVisible="True">
         <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition/>
+            <RowDefinition Height="Auto" MinHeight="34"/>
+            <RowDefinition Height="Auto" MinHeight="266"/>
+            <RowDefinition Height="Auto" MinHeight="68"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="511*"/>
-            <ColumnDefinition Width="6*"/>
+            <ColumnDefinition Width="241*"/>
         </Grid.ColumnDefinitions>
-        <Label Content="How to use this application" HorizontalAlignment="Left" Width="235" Foreground="#FF07FF00" ForceCursor="True" Height="29" VerticalAlignment="Top" FontWeight="Bold"/>
-        <Label Content="Use the number pad or click the &#xD;&#xA;textbox and type to enter a positive&#xD;&#xA;numeric value in the textbox.&#xD;&#xA;&#xD;&#xA;Select a calculation to display a set &#xD;&#xA;of calculation choices. &#xD;&#xA;&#xD;&#xA;Select a calculation choice radio &#xD;&#xA;button to choose the type of &#xD;&#xA;calculation to perform.&#xD;&#xA;&#xD;&#xA;For geometry calculations, use the &#xD;&#xA;unit of measure combo box to &#xD;&#xA;select the unit of measure.&#xD;&#xA;&#xD;&#xA;Click the Calc button to perform the &#xD;&#xA;calculation. " Grid.Row="1" VerticalAlignment="Top" Foreground="#FF07FF00"/>
-        <Button x:Name="btn_Close" Content="Close" Margin="84,45,103,0" Grid.Row="2" VerticalAlignment="Top" Foreground="#FF07FF00" RenderTransformOrigin="0.701,-0.076" Click="Btn_Close_Click">
+        <Label Content="How to use this application" HorizontalAlignment="Left" Width="235" Foreground="#FF07FF00" ForceCursor="True" Height="29" VerticalAlignment="Top" FontWeight="Bold" Margin="0,5,0,0"/>
+        <!-- <Label Content="" Grid.Row="1" VerticalAlignment="Top" Foreground="#FF07FF00"/> -->
+        <Button x:Name="btn_Close" Content="Close" Margin="101,16,101,0" Grid.Row="2" VerticalAlignment="Top" Foreground="#FF07FF00" RenderTransformOrigin="0.701,-0.076" Click="Btn_Close_Click" Height="30">
             <Button.Background>
                 <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
                     <GradientStop Color="#FFF3F3F3" Offset="0"/>
@@ -36,6 +35,7 @@
                 </LinearGradientBrush>
             </Button.Background>
         </Button>
+        <TextBlock HorizontalAlignment="Left" Margin="10,5,0,0" Grid.Row="1" Foreground="#FF07FF00" TextWrapping="Wrap" VerticalAlignment="Top" Text="Use the number pad or click the textbox and type to enter a positive numeric value in the textbox.&#x0a;&#x0a;Select a calculation to display a set of calculation choices.&#x0a;&#x0a;Select a calculation choice radio button to choose the type of calculation to perform.&#x0a;&#x0a;For geometry calculations, use the unit of measure combo box to select the unit of measure.&#x0a;&#x0a;Click the Calc button to perform the calculation. " Height="261" Width="235" />
 
     </Grid>
 </Window>
